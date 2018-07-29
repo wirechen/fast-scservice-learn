@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+
+eureka:
+  server:
+    enable-self-preservation: false #开发模式可以暂时关闭【自我保护机制】不剔除已关闭的服务节点
+
