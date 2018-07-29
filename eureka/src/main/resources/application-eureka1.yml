@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+
+eureka:
+  server:
+    enable-self-preservation: false # 开发模式可以暂时关闭【自我保护机制】不剔除已关闭的服务节点
+  client:  # 此eureka又作为另外一个eureka的客户端
+    service-url:
+      defaultZone: http://localhost:8762/eureka/ # 配置另一个eureka-server的地址
+    register-with-eureka: false # 表示是否注册自身到eureka服务器，这里表示不把自己注册到自己的eureka-server上
