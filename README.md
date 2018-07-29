@@ -7,6 +7,9 @@
 efc98ddb0582eeb5c8d888b81869b378adebfe3c
 
 ### 第二章 服务注册与发现-Eureka客户端
+ff8902db8afc53e53515ee91728ebe6e1fd07b15
 
 ### 第三章 服务注册与发现-Eureka两节点高可用
 2b68d7607a4730108059f9ceac3d27de2813d49a
+
+### 第四章 服务注册与发现-Eureka客户端注册多个Eureka服务端
