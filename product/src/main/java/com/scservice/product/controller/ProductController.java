@@ -19,6 +19,11 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    /**
+     * 获取商品列表(给订单服务用的)
+     * @param productIdList
+     * @return
+     */
     @GetMapping("/listForOrder")
     public List<ProductInfoVO> listForOrder(@RequestParam List<Integer> productIdList) {
         return productService.findList(productIdList);

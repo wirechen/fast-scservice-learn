@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 /**
  * @Author: WireChen
  * @Date: Created in 下午2:43 2018/7/30
- * @Description: product数据库映射对象
+ * @Description: product表映射对象
  */
 @Data
 @Entity
