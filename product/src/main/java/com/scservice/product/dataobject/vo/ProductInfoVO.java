@@ -16,12 +16,9 @@ public class ProductInfoVO implements Serializable{
 
     private static final long serialVersionUID = -5548839966839630114L;
 
-    @JsonProperty("id")
     private Integer productId;
 
-    @JsonProperty("name")
     private String productName;
 
-    @JsonProperty("price")
     private BigDecimal productPrice;
 }
