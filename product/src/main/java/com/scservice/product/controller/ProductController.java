@@ -1,11 +1,14 @@
 package com.scservice.product.controller;
 
+import com.scservice.product.dataobject.ro.ProductIdListRO;
 import com.scservice.product.dataobject.vo.ProductInfoVO;
 import com.scservice.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: WireChen
@@ -24,8 +27,9 @@ public class ProductController {
      * @param productIdList
      * @return
      */
-    @GetMapping("/listForOrder")
-    public List<ProductInfoVO> listForOrder(@RequestParam List<Integer> productIdList) {
-        return productService.findList(productIdList);
+    @PostMapping("/listForOrder")
+    public List<ProductInfoVO> listForOrder(@RequestBody ProductIdListRO productIdList) {
+        return productService.findList(productIdList.getProductIds());
     }
+
 }
