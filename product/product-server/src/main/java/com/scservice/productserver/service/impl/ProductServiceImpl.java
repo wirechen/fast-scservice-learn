@@ -1,6 +1,8 @@
 package com.scservice.productserver.service.impl;
 
+import com.scservice.productclient.ro.DecreaseStockRO;
 import com.scservice.productclient.vo.ProductInfoVO;
+import com.scservice.productserver.dataobject.model.ProductInfo;
 import com.scservice.productserver.repository.ProductInfoRepository;
 import com.scservice.productserver.service.ProductService;
 import org.springframework.beans.BeanUtils;
@@ -30,5 +32,16 @@ public class ProductServiceImpl implements ProductService {
             BeanUtils.copyProperties(productInfo, productInfoVO);
             return productInfoVO;
         }).collect(toList());
+    }
+
+    @Override
+    public void decreaseStock(List<DecreaseStockRO> decreaseStockROList) {
+        for (DecreaseStockRO decreaseStockRO : decreaseStockROList) {
+            int productId = decreaseStockRO.getProductId();
+            int productQuantity = decreaseStockRO.getProductQuantity();
+            ProductInfo productInfo = productInfoRepository.findById(productId).get();
+            productInfo.setProductStock(productInfo.getProductStock() - productQuantity);
+            productInfoRepository.save(productInfo);
+        }
     }
 }

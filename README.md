@@ -25,6 +25,11 @@ ff8902db8afc53e53515ee91728ebe6e1fd07b15
 2188e298ecdb3262d9b7c4b07bbedcd55a02cfdd
 
 ### 第七章 服务通信-MQ消息队列
+SQL:
+alter table product_info add product_stock int;
+update product_info set product_stock = 100 where product_id = 1;
+update product_info set product_stock = 100 where product_id = 2;
+
 
 ### 服务熔断-Hystrix
 

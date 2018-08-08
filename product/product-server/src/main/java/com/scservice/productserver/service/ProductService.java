@@ -2,6 +2,7 @@ package com.scservice.productserver.service;
 
 
 
+import com.scservice.productclient.ro.DecreaseStockRO;
 import com.scservice.productclient.vo.ProductInfoVO;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface ProductService {
      * @return
      */
     List<ProductInfoVO> findList(List<Integer> productIdList);
+
+    void decreaseStock(List<DecreaseStockRO> decreaseStockROList);
 }

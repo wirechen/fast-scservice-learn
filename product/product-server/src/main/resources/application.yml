@@ -6,6 +6,9 @@ spring:
     username: root
     password: buzhidao
     url: jdbc:mysql://localhost:3306/FastSCService?characterEncoding=utf-8&useSSL=false
+  rabbitmq:
+    host: 120.77.146.222
+    port: 5672
 server:
   port: 8764
 

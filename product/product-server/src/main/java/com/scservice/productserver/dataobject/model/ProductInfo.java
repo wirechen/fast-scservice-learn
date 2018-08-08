@@ -26,4 +26,7 @@ public class ProductInfo {
     /* 商品单价 */
     private BigDecimal productPrice;
 
+    /* 商品库存 */
+    private Integer productStock;
+
 }
